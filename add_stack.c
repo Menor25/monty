@@ -1,13 +1,16 @@
 #include "monty.h"
 
 /**
- * stack_add - adds an element to the stack
+ * add_stack -Main entry
+ * Description: adds an element to the stack
  * @stack: pointer to the top of the stack
  * @line_number: line number of the opcode
- */
-void stack_add(stack_t **stack, unsigned int line_number)
+ * Return void
+ **/
+
+void add_stack(stack_t **stack, unsigned int line_number)
 {
-	stack_t *delete = *stack;
+	stack_t *add = *stack;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -18,5 +21,5 @@ void stack_add(stack_t **stack, unsigned int line_number)
 	(*stack)->next->n = (*stack)->n + (*stack)->next->n;
 	(*stack)->next->prev = NULL;
 	*stack = (*stack)->next;
-	free(delete);
+	free(add);
 }
