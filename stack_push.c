@@ -1,13 +1,11 @@
 #include "monty.h"
 
 /**
- * pint_stack -Main entry
+ * isNum -Main entry
  * Description: checks if a string is a number
- * @stack: pointer to the top of the stack
- * @line_number: line number of the opcode
+ * @stack: unused
  * Return void
  **/
-
 int isNum(char *str)
 {
 	int i;
@@ -26,13 +24,12 @@ int isNum(char *str)
 }
 
 /**
- * push_stack -Main entry
+ * stack_push -Main entry
  * Description: adds an element to the top of the stack
  * @stack: pointer to the top of the stack
  * @line_number: line number of the opcode
  * Return void
  **/
-
 void stack_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new, *end;
