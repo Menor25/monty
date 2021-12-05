@@ -9,7 +9,7 @@
 int main(int argc, char **argv)
 {
 	if (argc != 2)
-		err_arguments();
+		error_arguments();
 	open_and_read(argv);
 	return (0);
 }

@@ -11,10 +11,10 @@ void _mod(stack_t **top, unsigned int line_number)
 	stack_t *tmp;
 
 	if (*top == NULL || (*top)->next ==  NULL)
-		mod_err(line_number);
+		mod_error(line_number);
 
 	if ((*top)->n == 0)
-		div_err2(line_number);
+		div_error2(line_number);
 
 	tmp = (*top)->next;
 	tmp->n = (tmp->n) % (*top)->n;
@@ -22,7 +22,7 @@ void _mod(stack_t **top, unsigned int line_number)
 }
 /**
  * rotl_stack -main entry.
- * Description: the top element of the stack becomes the last element of the stack.
+ * Description: top element of the stack becomes the last one.
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -51,7 +51,7 @@ void rotl_stack(stack_t **top, unsigned int line_number)
 }
 /**
  * rotr_stack -main entry.
- * Description:The last element of the stack becomes the top element of the stack
+ * Description:The last element of the stack becomes the top
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -96,12 +96,12 @@ void _pchar(stack_t **top, unsigned int line_number)
 	int ascii_num;
 
 	if (*top == NULL)
-		pchar_err2(line_number);
+		pchar_error2(line_number);
 
 	ascii_num = (*top)->n;
 
 	if (ascii_num < 0 || ascii_num > 127)
-		pchar_err(line_number);
+		pchar_error(line_number);
 	putchar(ascii_num);
 	putchar('\n');
 }

@@ -19,9 +19,7 @@ void open_and_read(char **argv)
 
 	fp = fopen(argv[1], "r");
 	if (fp == NULL)
-		open_err(argv);
-
-	/* Loop line by line till we get to the end of the file (EOF) */
+		open_error(argv);
 	while ((line_size = getline(&buf, &len, fp)) != EOF)
 	{
 		token = strtok(buf, "\n\t\r ");
@@ -30,13 +28,11 @@ void open_and_read(char **argv)
 		strcpy(command, token);
 		if (is_comment(token, line_counter) == 1)
 			continue;
-		/* String compare, if the string are equal it returns zero */
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\n\t\r ");
 			if (token == NULL || is_number(token) == -1)
 				not_int_err(line_counter);
-			/* If it is not an integer then lets convert it to an integer using the atoi() function */
 			number = atoi(token);
         /*p_func will receive the function to execute*/
 			p_func = get_op_code(command, line_counter);

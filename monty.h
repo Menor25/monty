@@ -37,27 +37,27 @@ typedef struct instruction_s
 } instruction_t;
 
 /* error_handler functions */
-void err_arguments(void);
-void open_err(char **);
-void invalidInstruction_err(char *invInstruction, unsigned int line);
+void error_arguments(void);
+void open_error(char **);
+void invalidInstruction_error(char *invInstruction, unsigned int line);
 void not_int_err(unsigned int line);
-void malloc_err(void);
+void malloc_error(void);
 
 /* error handler 2 */
-void pint_err(unsigned int line);
-void pop_err(unsigned int line);
-void swap_err(unsigned int line);
-void add_err(unsigned int line);
-void sub_err(unsigned int line);
+void pint_error(unsigned int line);
+void pop_error(unsigned int line);
+void swap_error(unsigned int line);
+void add_error(unsigned int line);
+void sub_error(unsigned int line);
 
 /* error_handler3 */
-void div_err(unsigned int line);
-void div_err2(unsigned int line);
-void mul_err(unsigned int line);
-void mod_err(unsigned int line);
+void div_error(unsigned int line);
+void div_error2(unsigned int line);
+void mul_error(unsigned int line);
+void mod_error(unsigned int line);
 /*error handler4*/
-void pchar_err(unsigned int line);
-void pchar_err2(unsigned int line);
+void pchar_error(unsigned int line);
+void pchar_error2(unsigned int line);
 
 /* executer functions*/
 void open_and_read(char **argv);
@@ -82,14 +82,14 @@ void _sub(stack_t **top, unsigned int line_number);
 void _div(stack_t **top, unsigned int line_number);
 void _mul(stack_t **top, unsigned int line);
 
-/* stack 2 */
+/* stack 3 */
 void _mod(stack_t **top, unsigned int line_number);
 void rotl_stack(stack_t **top, unsigned int line_number);
 void rotr_stack(stack_t **top, unsigned int line_number);
 void _nop(stack_t **top, unsigned int line);
 void _pchar(stack_t **top, unsigned int line_number);
 
-/*stack 3 */
+/*stack4 */
 void pstr_stack(stack_t **top, unsigned int line_number);
 
 #endif /* _MONTY_H_ */

@@ -8,14 +8,14 @@
  **/
 void _swap(stack_t **top, unsigned int line_number)
 {
-	int number;
+	int num;
 
 	if (*top == NULL || (*top)->next == NULL)
-		swap_err(line_number);
+		swap_error(line_number);
 
-	number = (*top)->n;
+	num = (*top)->n;
 	(*top)->n = (*top)->next->n;
-	(*top)->next->n = number;
+	(*top)->next->n = num;
 }
 /**
  *_add -main entry.
@@ -29,7 +29,7 @@ void _add(stack_t **top, unsigned int line_number)
 	stack_t *tmp;
 
 	if (*top == NULL || (*top)->next == NULL)
-		add_err(line_number);
+		add_error(line_number);
 
 	tmp = (*top)->next;
 	tmp->n += (*top)->n;
@@ -47,7 +47,7 @@ void _sub(stack_t **top, unsigned int line_number)
 	stack_t *tmp;
 
 	if (*top == NULL || (*top)->next == NULL)
-		sub_err(line_number);
+		sub_error(line_number);
 
 	tmp = (*top)->next;
 	tmp->n -= (*top)->n;
@@ -66,10 +66,10 @@ void _div(stack_t **top, unsigned int line_number)
 	stack_t *tmp;
 
 	if (*top == NULL || (*top)->next == NULL)
-		div_err(line_number);
+		div_error(line_number);
 
 	if ((*top)->n == 0)
-		div_err2(line_number);
+		div_error2(line_number);
 
 	tmp = (*top)->next;
 	tmp->n = (tmp->n) / (*top)->n;
@@ -87,7 +87,7 @@ void _mul(stack_t **top, unsigned int line_number)
 	stack_t *tmp;
 
 	if (*top == NULL || (*top)->next == NULL)
-		mul_err(line_number);
+		mul_error(line_number);
 
 	tmp = (*top)->next;
 	tmp->n *= (*top)->n;

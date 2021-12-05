@@ -4,17 +4,17 @@
  * @line: line
  * Return: void
  */
-void div_err(unsigned int line)
+void div_error(unsigned int line)
 {
 	fprintf(stderr, "L%u: can't div, stack too short\n", line);
 	exit(EXIT_FAILURE);
 }
 /**
- * div_error2 - If the top element of the stack is 0 print error
+ * div_error2 - Print error if the top element of the stack is 0
  * @line: line
  * Return: void
  */
-void div_err2(unsigned int line)
+void div_error2(unsigned int line)
 {
 	fprintf(stderr, "L%u: division by zero\n", line);
 	exit(EXIT_FAILURE);
@@ -25,7 +25,7 @@ void div_err2(unsigned int line)
  * Return: void
  */
 
-void mul_err(unsigned int line)
+void mul_error(unsigned int line)
 {
 	fprintf(stderr, "L%u: can't mul, stack too short\n", line);
 	exit(EXIT_FAILURE);
@@ -35,7 +35,7 @@ void mul_err(unsigned int line)
  * @line: The function´s parameter
  * Return: void
  */
-void mod_err(unsigned int line)
+void mod_error(unsigned int line)
 {
 	fprintf(stderr, "L%u: can't mod, stack too short\n", line);
 	exit(EXIT_FAILURE);
