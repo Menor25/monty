@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  *_mod -main entry.
- *Description: compute the rest of the div of the second top element of the stack by the top element
+ *Description: module of the second top element of the stack by the top element
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -21,59 +21,8 @@ void _mod(stack_t **top, unsigned int line_number)
 	pop_stack(top, line_number);
 }
 /**
- * _pchar -main entry.
- * Description: Prints the char at the top of the stack followed by a new line
- * @top: element at the top of the stack (head)
- * @line_number: constant int value in the structure
- * Return: void
- **/
-void _pchar(stack_t **top, unsigned int line_number)
-{
-	int ascii_number;
-
-	if (*top == NULL)
-		pchar_err2(line_number);
-
-	ascii_number = (*top)->n;
-
-	if (ascii_number < 0 || ascii_number > 127)
-		pchar_err(line_number);
-	putchar(ascii_number);
-	putchar('\n');
-}
-/**
- * pstr_stack -main entry
- * Description: prints the string starting at the top of the stack.
- * @top: element at the top of the stack (head)
- * @line_number: line
- * Return: void
- */
-void pstr_stack(stack_t **top, unsigned int line_number)
-{
-	stack_t *tmp;
-	int ascii_number;
-
-	(void)line_number;
-	if (*top == NULL)
-	{
-		putchar('\n');
-		return;
-	}
-	tmp = *top;
-	while (tmp != NULL)
-	{
-		ascii_number = tmp->n;
-
-		if (ascii_number <= 0 || ascii_number > 127)
-			break;
-		putchar(ascii_number);
-		tmp = tmp->next;
-	}
-	putchar('\n');
-}
-/**
  * rotl_stack -main entry.
- * Description: rotates the stack to the top
+ * Description: the top element of the stack becomes the last element of the stack.
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -102,7 +51,7 @@ void rotl_stack(stack_t **top, unsigned int line_number)
 }
 /**
  * rotr_stack -main entry.
- * Description: rotates the stack to the bottom (the last element becomes the top element)
+ * Description:The last element of the stack becomes the top element of the stack
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -135,4 +84,24 @@ void _nop(stack_t **top, unsigned int line_number)
 	(void) top;
 	(void) line_number;
 }
+/**
+ * _pchar -main entry.
+ * Description: Prints the char at the top of the stack
+ * @top: element at the top of the stack (head)
+ * @line_number: constant int value in the structure
+ * Return: void
+ **/
+void _pchar(stack_t **top, unsigned int line_number)
+{
+	int ascii_num;
 
+	if (*top == NULL)
+		pchar_err2(line_number);
+
+	ascii_num = (*top)->n;
+
+	if (ascii_num < 0 || ascii_num > 127)
+		pchar_err(line_number);
+	putchar(ascii_num);
+	putchar('\n');
+}

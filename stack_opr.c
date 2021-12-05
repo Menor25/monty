@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  *_swap -main entry.
- *Description: The _swap Function is a function that swaps the top 2 elements of a stack
+ *Description: Function that swaps the top 2 elements of stack
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -19,7 +19,7 @@ void _swap(stack_t **top, unsigned int line_number)
 }
 /**
  *_add -main entry.
- *Description: _add Function is a function that adds the top two elements of the stack
+ *Description: Function that adds the top two elements of the stack
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -37,7 +37,7 @@ void _add(stack_t **top, unsigned int line_number)
 }
 /**
  *_sub -main entry.
- *Description: _sub function subtract the top element of the stack from the 2nd top element of the stack
+ *Description:Sub the top element of stck from the 2d top elem of the stak
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -55,7 +55,7 @@ void _sub(stack_t **top, unsigned int line_number)
 }
 /**
  * _div - main entry
- * Description: _div function divides the seccond top element of the stack by the top element
+ * Description: Divides the seccond top element of the stack by the top element
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -77,7 +77,7 @@ void _div(stack_t **top, unsigned int line_number)
 }
 /**
  * _mul - main entry
- * Description: _mul function multiply the seccond top element of stack and the top element
+ * Description: multiply the seccond top element of stack and the top element
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void

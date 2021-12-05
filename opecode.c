@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
- * get_opcode - this is a function that will perform the opr
- * @token: opr code
- * @line: read line
+ * get_op_code - contain the function that will perform the operation on the stack
+ * @token: operation code
+ * @line: line readed
  * Return: void
  */
 void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
 {
-/* Using the instruction_t function in the monty.h */
+/*arreglo de estructuras*/
 	int i;
 	instruction_t opr[] = {
 		{"push", push_stack}, //pushes an element to the top of the stack
@@ -27,8 +27,8 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
 		{"pstr", pstr_stack}, //print the string starting at the top of the stack, followed by a new line
 		{NULL, NULL}
 	};
-    
-    //looping through the opr[]
+
+	//looping through the opr[]
 	for (i = 0; opr[i].opcode != NULL; i++)
 	{
 		if (strcmp(token, opr[i].opcode) == 0)
@@ -36,6 +36,6 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
 			return (opr[i].f);
 		}
 	}
-	invalid_err(token, line);
+	invalidInstruction_err(token, line);
 	return (NULL);
 }

@@ -1,7 +1,7 @@
 #include "monty.h"
 int number;
 /**
- * push_stack -push (add) node to the top of the list.
+ * push_stack -push (add) node to list.
  *Description: Function that push a new node at the beginning of stack_t stack
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
@@ -19,12 +19,12 @@ void push_stack(stack_t **top, unsigned int line_number)
 
 	newNode->n = number;
 	newNode->prev = NULL;
-	if (*top == NULL)  // Check if stack is empty
+	if (*top == NULL)  /* Check if stack is empty*/
 	{
 		newNode->next = NULL;
 		*top = newNode;
 	}
-	else // If stack is not empty
+	else /* check if stack is not empty */
 	{
 	newNode->next = *top;
 	(*top)->prev = newNode;
@@ -33,7 +33,7 @@ void push_stack(stack_t **top, unsigned int line_number)
 }
 /**
  * pall_stack -print.
- *Description: Function that print all the elements of a stack
+ *Description: Function that print the elements of a stack
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -51,7 +51,7 @@ void pall_stack(stack_t **top, unsigned int line_number)
 }
 /**
  * free_stack -free list.
- *Description: Function that frees a list_t list
+ *Description: Function that frees a dlist_t list
  * @top: top of the stack. (head)
  * Return: void
  **/
@@ -72,7 +72,7 @@ void free_stack(stack_t *top)
 }
 /**
  * pint_stack -print.
- * Description: Function that print the value at the top of the stack
+ * Description: Function that print the valueat top of stack
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -88,7 +88,7 @@ void pint_stack(stack_t **top, unsigned int line_number)
 }
 /**
  * pop_stack -print.
- * Description: Function that pop (delete) the value at top of a stack
+ * Description: Function that pop (delete) the value at top of stack
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
