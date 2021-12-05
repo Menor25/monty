@@ -8,7 +8,7 @@
  * Return void
  **/
 
-int is_number(char *str)
+int isNum(char *str)
 {
 	int i;
 
@@ -26,14 +26,14 @@ int is_number(char *str)
 }
 
 /**
- * pint_stack -Main entry
+ * push_stack -Main entry
  * Description: adds an element to the top of the stack
  * @stack: pointer to the top of the stack
  * @line_number: line number of the opcode
  * Return void
  **/
 
-void push_stack(stack_t **stack, unsigned int line_number)
+void stack_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new, *end;
 

@@ -8,7 +8,7 @@
  * Return void
  **/
 
-void add_stack(stack_t **stack, unsigned int line_number)
+void stack_add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *add = *stack;
 

@@ -8,7 +8,7 @@
  * Return void
  **/
 
-void pstr_stack(stack_t **stack, unsigned int line_number)
+void stack_pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = *stack;
 

@@ -8,7 +8,7 @@
  * Return void
  **/
 
-void rotl_stack(stack_t **stack, unsigned int line_number)
+void stack_rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *end = *stack;
 

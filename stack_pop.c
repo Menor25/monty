@@ -1,14 +1,14 @@
 #include "monty.h"
 
 /**
- * pint_stack -Main entry
+ * pop_stack -Main entry
  * Description: removes the top element of the stack
  * @stack: pointer to the top of the stack
  * @line_number: line number of the opcode
  * Return void
  **/
 
-void pop_stack(stack_t **stack, unsigned int line_number)
+void stack_pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *pop = *stack;
 

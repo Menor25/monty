@@ -6,7 +6,7 @@
  * Return: void
  **/
 
-void execute(void)
+void execute_script(void)
 {
 	char *line = NULL;
 	size_t len = 0;

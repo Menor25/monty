@@ -7,7 +7,7 @@
  * @line_number: line number of the opcode
  * Return void
  **/
-void nop_stack(stack_t **stack, unsigned int line_number)
+void stack_nop(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
 	(void)line_number;

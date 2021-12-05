@@ -7,7 +7,7 @@
  * @line_number: line number of the opcode
  * Return void
  **/
-void div_stack(stack_t **stack, unsigned int line_number)
+void stack_div(stack_t **stack, unsigned int line_number)
 {
 	stack_t *div = *stack;
 

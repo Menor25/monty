@@ -8,7 +8,7 @@
  * Return void
  **/
 
-void pint_stack(stack_t **stack, unsigned int line_number)
+void stack_pint(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{

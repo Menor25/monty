@@ -8,7 +8,7 @@
  * Return void
  **/
 
-void mul_stack(stack_t **stack, unsigned int line_number)
+void stack_mul(stack_t **stack, unsigned int line_number)
 {
 	stack_t *mul = *stack;
 

@@ -12,7 +12,7 @@
  * @next: points to the next element of the stack (or queue)
  *
  * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO
+ * for stack, queues, LIFO, FIFO Holberton project
  */
 typedef struct stack_s
 {
@@ -27,7 +27,7 @@ typedef struct stack_s
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO
+ * for stack, queues, LIFO, FIFO Holberton project
  */
 typedef struct instruction_s
 {
@@ -62,26 +62,25 @@ typedef struct allocated_s
 } allocated_t;
 
 extern allocated_t mem;
-void execute(void);
-void push_stack(stack_t **stack, unsigned int line_number);
-void pall_stack(stack_t **stack, unsigned int line_number);
-void pint_stack(stack_t **stack, unsigned int line_number);
-void pop_stack(stack_t **stack, unsigned int line_number);
-void swap_stack(stack_t **stack, unsigned int line_number);
-void add_stack(stack_t **stack, unsigned int line_number);
-void nop_stack(stack_t **stack, unsigned int line_number);
-void sub_stack(stack_t **stack, unsigned int line_number);
-void div_stack(stack_t **stack, unsigned int line_number);
-void mul_stack(stack_t **stack, unsigned int line_number);
-void mod_stack(stack_t **stack, unsigned int line_number);
-void pchar_stack(stack_t **stack, unsigned int line_number);
-void pstr_stack(stack_t **stack, unsigned int line_number);
-void rotl_stack(stack_t **stack, unsigned int line_number);
-void rotr_stack(stack_t **stack, unsigned int line_number);
-void stack_opr(stack_t **stack, unsigned int line_number);
-void queue_opr(stack_t **stack, unsigned int line_number);
+void execute_script(void);
+void stack_push(stack_t **stack, unsigned int line_number);
+void stack_pall(stack_t **stack, unsigned int line_number);
+void stack_pint(stack_t **stack, unsigned int line_number);
+void stack_pop(stack_t **stack, unsigned int line_number);
+void stack_swap(stack_t **stack, unsigned int line_number);
+void stack_add(stack_t **stack, unsigned int line_number);
+void stack_nop(stack_t **stack, unsigned int line_number);
+void stack_sub(stack_t **stack, unsigned int line_number);
+void stack_div(stack_t **stack, unsigned int line_number);
+void stack_mul(stack_t **stack, unsigned int line_number);
+void stack_mod(stack_t **stack, unsigned int line_number);
+void stack_pchar(stack_t **stack, unsigned int line_number);
+void stack_pstr(stack_t **stack, unsigned int line_number);
+void stack_rotl(stack_t **stack, unsigned int line_number);
+void stack_rotr(stack_t **stack, unsigned int line_number);
+void op_stack(stack_t **stack, unsigned int line_number);
+void op_queue(stack_t **stack, unsigned int line_number);
 void free_all(stack_t *stack);
-int is_number(char *str);
+int isNum(char *str);
 
 #endif
-

@@ -8,7 +8,7 @@
  * Return void
  **/
 
-void pchar_stack(stack_t **stack, unsigned int line_number)
+void stack_pchar(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
